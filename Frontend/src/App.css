@@ -1,0 +1,63 @@
+.app-root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-base, #0b0d11);
+  position: relative;
+}
+
+/* Layout: Sidebar on left, Main content on right */
+.app-body {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  position: relative;
+  min-height: calc(100vh - var(--nav-height, 56px));
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 32px 48px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Toast feedback - quiet hairline card */
+.app-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 250;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface-3, #1d222d);
+  border: 1px solid var(--border-medium, rgba(255, 255, 255, 0.12));
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.35));
+  padding: 8px 14px;
+  border-radius: var(--radius-sm, 6px);
+  color: var(--text-primary, #f0f2f5);
+  font-size: 0.82rem;
+  font-weight: 500;
+  animation: fadeIn 0.14s ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .app-main {
+    padding: 20px 20px 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    padding: 16px 12px 28px;
+  }
+  .app-toast {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    justify-content: center;
+  }
+}

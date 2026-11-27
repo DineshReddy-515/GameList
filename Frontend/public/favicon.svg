@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="50%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#060d11"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="url(#tealGrad)" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Gamepad body -->
+  <path d="M16 26C16 21.5817 19.5817 18 24 18H40C44.4183 18 48 21.5817 48 26V36C48 41.5228 43.5228 46 38 46C34.6863 46 32 43.3137 32 40C32 43.3137 29.3137 46 26 46C20.4772 46 16 41.5228 16 36V26Z" fill="url(#tealGrad)" filter="url(#glow)"/>
+  <!-- D-Pad -->
+  <path d="M23 26V34M19 30H27" stroke="#060d11" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Action Buttons -->
+  <circle cx="39" cy="28" r="1.8" fill="#060d11"/>
+  <circle cx="43" cy="32" r="1.8" fill="#060d11"/>
+  <circle cx="35" cy="32" r="1.8" fill="#060d11"/>
+  <circle cx="39" cy="36" r="1.8" fill="#060d11"/>
+  <!-- Center Accent Light -->
+  <circle cx="32" cy="27" r="1.5" fill="#5eead4"/>
+</svg>
